@@ -18,50 +18,50 @@ public class FizikFormul {
     // METOT 1: Hız hesapla (v = s / t)
     public static double calculateVelocity(double distance, double time) {
         // v = mesafe / zaman
-        return 0.0; // Degistirin
+        return distance / time;
     }
 
     // METOT 2: İvme hesapla (a = Δv / t)
     public static double calculateAcceleration(double velocityChange, double time) {
         // a = hiz degisimi / zaman
-        return 0.0; // Degistirin
+        return velocityChange / time;
     }
 
     // METOT 3: Kuvvet hesapla (F = m * a)
     public static double calculateForce(double mass, double acceleration) {
         // F = kutle * ivme
-        return 0.0; // Degistirin
+        return mass * acceleration;
     }
 
     // METOT 4: İş hesapla (W = F * d)
     public static double calculateWork(double force, double distance) {
         // W = kuvvet * mesafe
-        return 0.0; // Degistirin
+        return force * distance;
     }
 
     // METOT 5: Güç hesapla (P = W / t)
     public static double calculatePower(double work, double time) {
         // P = is / zaman
-        return 0.0; // Degistirin
+        return work / time;
     }
 
     // METOT 6: Kinetik enerji (KE = 0.5 * m * v²)
     public static double calculateKineticEnergy(double mass, double velocity) {
         // KE = 0.5 * kutle * (hiz * hiz)
         // Math.pow(velocity, 2) kullanabilirsiniz
-        return 0.0; // Degistirin
+        return 0.5 * mass * Math.pow(velocity, 2);
     }
 
     // METOT 7: Potansiyel enerji (PE = m * g * h)
     public static double calculatePotentialEnergy(double mass, double gravity, double height) {
         // PE = kutle * yercekimi * yukseklik
-        return 0.0; // Degistirin
+        return mass * gravity * height;
     }
 
     // METOT 8: Momentum (p = m * v)
     public static double calculateMomentum(double mass, double velocity) {
         // p = kutle * hiz
-        return 0.0; // Degistirin
+        return mass * velocity;
     }
 
     public static void main(String[] args) {
@@ -89,10 +89,33 @@ public class FizikFormul {
 
         // HESAPLAMALARI YAP - Metotlari cagir
         // 1. Hiz (v) hesaplanmali (KE ve Momentum icin gerekli)
+        double velocity = calculateVelocity(distance, time);
+        
         // 2. Ivme (a) hesaplanmali (Kuvvet icin gerekli)
+        double acceleration = calculateAcceleration(velocityChange, time);
+        
         // 3. Kuvvet (F) hesaplanmali (Is icin gerekli)
+        double force = calculateForce(mass, acceleration);
+        
         // 4. Is (W) hesaplanmali (Guc icin gerekli)
-        // ... digerlerini hesaplayin
+        double work = calculateWork(force, distanceWork);
+
+        // 5. Guc (P)
+        double power = calculatePower(work, timePower);
+
+        // 6. Kinetik Enerji (KE)
+        double kineticEnergy = calculateKineticEnergy(massKE, velocityKE);
+
+        // 7. Potansiyel Enerji (PE)
+        double potentialEnergy = calculatePotentialEnergy(massPE, gravityPE, heightPE);
+
+        // 8. Momentum (p)
+        double momentum = calculateMomentum(massMomentum, velocityMomentum);
+        
+        
+
+        
+      
   
 
 
